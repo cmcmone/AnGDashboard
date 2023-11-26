@@ -2,8 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
-const MOLINA = 
-`
+const MOLINA = `
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg viewBox="0 0 118 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
@@ -38,7 +37,7 @@ const MOLINA =
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
   @Input() isMenuOpened: boolean = false;
@@ -49,10 +48,13 @@ export class HeaderComponent {
     this.isShowSidebar.emit(this.isMenuOpened);
   }
 
-  LOBs: string[] = ["Medicare", "Medicaid", "Marketplace"];
-  currentLOB: string = "Medicare";
+  LOBs: string[] = ['Medicare', 'Medicaid', 'Marketplace'];
+  currentLOB: string = 'Medicare';
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIconLiteral('molina-logo', sanitizer.bypassSecurityTrustHtml(MOLINA));
+    iconRegistry.addSvgIconLiteral(
+      'molina-logo',
+      sanitizer.bypassSecurityTrustHtml(MOLINA)
+    );
   }
 }

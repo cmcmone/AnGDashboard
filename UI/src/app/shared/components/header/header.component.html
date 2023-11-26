@@ -1,27 +1,35 @@
-
 <mat-toolbar color="primary">
   <button mat-icon-button aria-label="menu" (click)="openMenu()">
     <mat-icon *ngIf="!isMenuOpened">menu_open</mat-icon>
     <mat-icon *ngIf="isMenuOpened">menu</mat-icon>
   </button>
   <div class="logosize">
-    <mat-icon class="customIconSize" svgIcon="molina-logo" aria-label="Molina logo"></mat-icon>
+    <mat-icon
+      class="customIconSize"
+      svgIcon="molina-logo"
+      aria-label="Molina logo"
+    ></mat-icon>
   </div>
   <div>
     <h6>A&G Dashboard</h6>
   </div>
-  
+
   <span class="spacer"></span>
 
-  <button mat-flat-button color="accent" aria-label="LOB" [matMenuTriggerFor]="menu">
+  <button
+    mat-flat-button
+    color="accent"
+    aria-label="LOB"
+    [matMenuTriggerFor]="menu"
+  >
     <mat-icon>medical_services</mat-icon>
     <mat-icon iconPositionEnd>arrow_drop_down</mat-icon>
-    {{currentLOB}}
+    {{ currentLOB }}
   </button>
   <mat-menu #menu="matMenu" color="primary" aria-label="LOB meun">
     <button mat-menu-item *ngFor="let lob of LOBs">
-        {{lob}}
-        <mat-icon *ngIf="lob == currentLOB">check</mat-icon>
+      {{ lob }}
+      <mat-icon *ngIf="lob == currentLOB">check</mat-icon>
     </button>
   </mat-menu>
- </mat-toolbar>
+</mat-toolbar>

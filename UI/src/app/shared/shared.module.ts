@@ -6,19 +6,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
-import {MatSelectModule} from '@angular/material/select';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
-  declarations: [
-    LayoutComponent,
-    HeaderComponent,
-    SidebarComponent
-  ],
+  declarations: [LayoutComponent, HeaderComponent, SidebarComponent],
   imports: [
     CommonModule,
     MatSidenavModule,
@@ -28,6 +24,6 @@ import {MatMenuModule} from '@angular/material/menu';
     MatListModule,
     MatSelectModule,
     MatMenuModule,
-  ]
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
