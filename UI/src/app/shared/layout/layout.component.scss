@@ -1,0 +1,15 @@
+.layout {
+  width: 100%;
+}
+
+.sidenav-container {
+  width: 100%;
+  height: calc(100vh - 64px);
+}
+
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+}
