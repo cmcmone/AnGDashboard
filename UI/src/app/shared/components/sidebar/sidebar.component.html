@@ -14,7 +14,7 @@
     (click)="changeListItem('Dashboard2')"
   >
     <div class="icon-text">
-      <mat-icon>home</mat-icon> <span>Dashboard2</span>
+      <mat-icon>tty</mat-icon> <span>Dashboard2</span>
     </div>
   </mat-list-item>
   <mat-list-item
@@ -23,7 +23,7 @@
     (click)="changeListItem('Dashboard3')"
   >
     <div class="icon-text">
-      <mat-icon>home</mat-icon> <span>Dashboard3</span>
+      <mat-icon>medication</mat-icon> <span>Dashboard3</span>
     </div>
   </mat-list-item>
   <mat-list-item
@@ -32,7 +32,25 @@
     (click)="changeListItem('Dashboard4')"
   >
     <div class="icon-text">
-      <mat-icon>home</mat-icon> <span>Dashboard4</span>
+      <mat-icon>enhanced_encryption</mat-icon> <span>Dashboard4</span>
     </div>
   </mat-list-item>
+  <mat-list-item
+    routerLink="#"
+    [activated]="listItem == 'Dashboard4'"
+    (click)="changeListItem('Dashboard4')"
+  >
+    <div class="icon-text">
+      <mat-icon>hub</mat-icon> <span>Dashboard4</span>
+    </div>
+  </mat-list-item>
+  <mat-list-item
+    routerLink="#"
+    [activated]="listItem == 'Dashboard4'"
+    (click)="changeListItem('Dashboard4')"
+  >
+    <div class="icon-text">
+      <mat-icon>spatial_audio</mat-icon> <span>Dashboard4</span>
+    </div>
+  </mat-list-item>  
 </mat-nav-list>
